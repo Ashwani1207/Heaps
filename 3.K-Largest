@@ -1,4 +1,4 @@
-using Min_heap
+Approach 1 : Using MIN_HEAP
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -36,3 +36,40 @@ OUTPUT :
 100
 290
 1000
+
+
+Approach 2 : Using MAX_HEAP
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	priority_queue<int, vector<int> > pq;
+	int n;
+	cin>>n;
+	int a[n];
+	for(int i=0;i<n;i++){
+	    cin>>a[i];
+	}
+	int k;
+	cin>>k;
+    for(int i=0;i<n;i++){
+        pq.push(a[i]);
+    }
+
+	for(int i=0;i<k;i++){
+	    cout<<pq.top()<<endl;
+	    pq.pop();
+	}
+	return 0;
+}
+
+
+input : 
+6
+100 2 34 56 290 1000
+3
+OUTPUT : 
+1000
+290
+100
