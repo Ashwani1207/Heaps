@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	priority_queue<int, vector<int>,greater<int> > pq;
+	priority_queue<int > maxh;
 	int n;
 	cin>>n;
 	int a[n];
@@ -10,11 +10,11 @@ int main() {
 	    cin>>a[i];
 	}
 	for(int i=0;i<n;i++){
-	    pq.push(a[i]);
+	    maxh.push(a[i]);
 	}
-	while(!pq.empty()){
-	    cout<<pq.top()<<endl;
-	    pq.pop();
+	while(!maxh.empty()){
+	    cout<<"This is the max_heap : "<<maxh.top()<<endl;
+	    maxh.pop();
 	}
 	return 0;
 }
