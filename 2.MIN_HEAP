@@ -1,25 +1,21 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
-	priority_queue<int, vector<int>,greater<int> > pq;
-	int n;
-	cin>>n;
-	int a[n];
-	for(int i=0;i<n;i++){
-	    cin>>a[i];
-	}
-	for(int i=0;i<n;i++){
-	    pq.push(a[i]);
-	}
-	//The SMALLEST element is on top
-	while(!pq.empty()){
-	    cout<<"This is the min_heap : "<<pq.top()<<endl;
-	    pq.pop();
-	}
-	return 0;
+int main(){
+    priority_queue<int,vector<int>,greater<int>> minh;
+    
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        minh.push(arr[i]);
+    }
+    while(!minh.empty()){
+        cout<<"This is the min_heap : "<<minh.top()<<endl;
+        minh.pop();
+    }
+    return 0;
 }
-
 
 INPUT : 
 6
